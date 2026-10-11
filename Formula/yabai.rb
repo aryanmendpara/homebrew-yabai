@@ -3,7 +3,7 @@ class Yabai < Formula
   homepage "https://github.com/VenusCrazy/yabai"
   url "https://github.com/VenusCrazy/yabai/archive/refs/tags/v7.1.27-macos27.tar.gz"
   version "7.1.27-macos27"
-  sha256 "ee0240a455c390c2078a7b36090a5a885b474db5f8dfe72c081ea2b5434890d9"
+  sha256 "92b6d568bcdc8cd29524c9ced7ba91bd16ae519700a009cbfe2fa47e77f745c4"
   license "MIT"
   head "https://github.com/VenusCrazy/yabai.git", branch: "master"
 
