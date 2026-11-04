@@ -1,9 +1,9 @@
 class Yabai < Formula
   desc "Tiling window manager for macOS (macOS 27 / Golden Gate fork)"
   homepage "https://github.com/aryanmendpara/yabai"
-  url "https://github.com/aryanmendpara/yabai/archive/refs/tags/v7.1.28-macos27.2.tar.gz"
-  version "7.1.28-macos27.2"
-  sha256 "4dc929e99f1ec8b513ea2bb421d3b20ac860fac51377331a6a3abcdef51ff962"
+  url "https://github.com/aryanmendpara/yabai/archive/refs/tags/v7.1.28-macos27.3.tar.gz"
+  version "7.1.28-macos27.3"
+  sha256 "74c29f2096b10da2cc4bc50de5bb3d7a8e707c4b0f713f08df528f13909eb555"
   license "MIT"
   head "https://github.com/aryanmendpara/yabai.git", branch: "master"
 
@@ -16,6 +16,7 @@ class Yabai < Formula
     system "codesign", "--force", "--sign", "-", binary
 
     bin.install binary
+    bin.install "scripts/install-sudoers.sh" => "yabai-sudoers"
     (pkgshare/"examples").install "#{buildpath}/examples/yabairc"
     (pkgshare/"examples").install "#{buildpath}/examples/skhdrc"
     man1.install "#{buildpath}/doc/yabai.1"
@@ -33,14 +34,14 @@ class Yabai < Formula
 
       macOS 27 does not auto-load the scripting-addition, so configure it once.
 
-      1. Add a passwordless sudoers rule for --load-sa. Run this with the
-         absolute path to yabai (from `command -v yabai`):
+      1. Run the helper; it writes the passwordless sudoers rule for --load-sa
+         and loads the scripting-addition (asks for your password once):
 
-           echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 /path/to/yabai | cut -d ' ' -f 1) /path/to/yabai --load-sa"
+           yabai-sudoers
 
-         then paste the printed line (with the real path) into:
-
-           sudo visudo -f /private/etc/sudoers.d/yabai
+         The rule pins the installed binary's sha256, so run it again after
+         every `brew upgrade yabai` (the upgrade otherwise silently breaks
+         the scripting-addition).
 
       2. Add these as the first two lines of ~/.config/yabai/yabairc,
          replacing BIN with the output of `command -v yabai`:
