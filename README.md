@@ -1,6 +1,6 @@
 # homebrew-yabai
 
-Homebrew tap for the [macOS 27 (Golden Gate) fork of yabai](https://github.com/VenusCrazy/yabai).
+Homebrew tap for the [macOS 27 (Golden Gate) fork of yabai](https://github.com/aryanmendpara/yabai).
 
 Upstream yabai does not yet support macOS 27. This tap builds the fork, which adds:
 
@@ -11,13 +11,13 @@ Upstream yabai does not yet support macOS 27. This tap builds the fork, which ad
 ## Install
 
 ```sh
-brew install venuscrazy/yabai/yabai
+brew install aryanmendpara/yabai/yabai
 ```
 
 To build the latest commit instead of the tagged release:
 
 ```sh
-brew install --HEAD venuscrazy/yabai/yabai
+brew install --HEAD aryanmendpara/yabai/yabai
 ```
 
 ## After installing
@@ -63,7 +63,7 @@ brew install --HEAD venuscrazy/yabai/yabai
    sudo /path/to/yabai --load-sa
    ```
 
-See [`doc/BUILD-macOS-27.md`](https://github.com/VenusCrazy/yabai/blob/master/doc/BUILD-macOS-27.md)
+See [`doc/BUILD-macOS-27.md`](https://github.com/aryanmendpara/yabai/blob/master/doc/BUILD-macOS-27.md)
 for the complete guide and troubleshooting.
 
 ## Migrating back to upstream
@@ -72,7 +72,7 @@ Once `asmvik` ships official macOS 27 support:
 
 ```sh
 brew uninstall yabai
-brew untap venuscrazy/yabai
+brew untap aryanmendpara/yabai
 brew install asmvik/formulae/yabai
 ```
 

@@ -1,11 +1,11 @@
 class Yabai < Formula
   desc "Tiling window manager for macOS (macOS 27 / Golden Gate fork)"
-  homepage "https://github.com/VenusCrazy/yabai"
-  url "https://github.com/VenusCrazy/yabai/archive/refs/tags/v7.1.27-macos27.tar.gz"
-  version "7.1.27-macos27"
-  sha256 "d38627c80388008632e0c7705e354dd8eca4f953c41a00be52c897e842c87deb"
+  homepage "https://github.com/aryanmendpara/yabai"
+  url "https://github.com/aryanmendpara/yabai/archive/refs/tags/v7.1.27-macos27.1.tar.gz"
+  version "7.1.27-macos27.1"
+  sha256 "d403d55e3609c97946604dcb527b7f1f7e863a3b4ab16d2c4db5911699e8f8a0"
   license "MIT"
-  head "https://github.com/VenusCrazy/yabai.git", branch: "master"
+  head "https://github.com/aryanmendpara/yabai.git", branch: "master"
 
   depends_on :macos
 
@@ -54,7 +54,7 @@ class Yabai < Formula
 
       When running as a launchd service, logs are written to /tmp/yabai_<user>.[out|err].log.
 
-      Full guide: https://github.com/VenusCrazy/yabai/blob/master/doc/BUILD-macOS-27.md
+      Full guide: https://github.com/aryanmendpara/yabai/blob/master/doc/BUILD-macOS-27.md
     EOS
   end
 
