@@ -5,6 +5,7 @@ Homebrew tap for the [macOS 27 (Golden Gate) fork of yabai](https://github.com/a
 Upstream yabai does not yet support macOS 27. This tap builds the fork, which adds:
 
 - macOS 27 scripting-addition offsets (Apple Silicon / arm64e)
+- space reordering on macOS 27.2 (`space --move` / `--swap` / `--display`, `window --space` / `--display`)
 - scripting-addition load fix (the `-arm64e_preview_abi` boot-arg is not required on macOS 14.4+)
 - main-binary macOS 27 recognition (treated as Tahoe-compatible, so Mission Control observation, space/window notifications and the sub-level query work)
 
